@@ -2,17 +2,8 @@
   "name": "ethomasjoseph-com",
   "private": true,
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
+    "modernizr": "~2.8.1",
+    "bootstrap": "v4.0.0-alpha.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
