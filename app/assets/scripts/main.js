@@ -1,2 +1,1 @@
-"use strict";
-//# sourceMappingURL=main.js.map
+"use strict";$(document).ready(function(){$("#sidebarToggler").on("click",function(){console.log("opening sidebar"),$("#sidebar").fadeIn(10).css("width","50%")}),$(".btn-sidebar-close").on("click",function(){console.log("closing sidebar"),$("#sidebar").css("width","0").fadeOut()})});

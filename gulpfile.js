@@ -25,7 +25,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('app/assets/styles'))
+    .pipe(gulp.dest('.tmp/assets/styles'))
     .pipe(reload({stream: true}));
 });
 
@@ -37,7 +37,7 @@ gulp.task('scripts', () => {
     .pipe($.jshint())
     .pipe($.jshint.reporter(stylish))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('app/assets/scripts'))
+    .pipe(gulp.dest('.tmp/assets/scripts'))
     .pipe(reload({stream: true}));
 });
 
@@ -59,8 +59,8 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/**/*.html')
-    .pipe($.useref({searchPath: ['app']}))
+  return gulp.src('src/**/*.html')
+    .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
@@ -107,7 +107,7 @@ gulp.task('jekyll', function() {
   jekyllProc.stderr.on('data', jekyllLogger('red'));
 });
 
-gulp.task('clean', del.bind(null, ['_site']));
+gulp.task('clean', del.bind(null, ['.tmp', '_site']));
 
 gulp.task('serve', () => {
   runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], 'jekyll', () => {
@@ -126,8 +126,8 @@ gulp.task('serve', () => {
       'app/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('src/assets/styles/**/*.scss', ['styles']);
-    gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/assets/styles/**/*.scss', ['html']);
+    gulp.watch('src/assets/scripts/**/*.js', ['html']);
     gulp.watch('src/assets/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
@@ -154,7 +154,7 @@ gulp.task('serve', () => {
 // });
 
 
-// inject bower components
+// inject bower components (and keep within src)
 gulp.task('wiredep', () => {
   gulp.src('src/assets/styles/*.scss')
     .pipe($.filter(file => file.stat && file.stat.size))
@@ -168,7 +168,7 @@ gulp.task('wiredep', () => {
       exclude: ['bootstrap'],
       ignorePath: /^(\.\.\/)*\.\./
     }))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('src'));
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras']);
