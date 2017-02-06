@@ -69,6 +69,8 @@ gulp serve
 
 The above command will process the JavaScript files by concatinating, uglifying and linting them; start Jekyll server; and lint the generated HTML files as well!
 
+*Note:* Because of the way gulp workflow is setup, any file which requires gulp to perform a workflow (eg wiring dependencies etc), should reside in `src` folder, while others can be directly put under `app`.
+
 ### Publishing changes to Github powered website
 Simply running ```gulp``` will do all the above tasks, but without running the Jekyll server itself, and instead preparing for committing the changes to Github.
 

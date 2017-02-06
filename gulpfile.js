@@ -15,7 +15,7 @@ const reload = browserSync.reload;
 var dev = true;
 
 gulp.task('styles', () => {
-  return gulp.src('src/assets/styles/*.scss')
+  return gulp.src('src/assets/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -126,8 +126,7 @@ gulp.task('serve', () => {
       'app/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('src/assets/styles/**/*.scss', ['html']);
-    gulp.watch('src/assets/scripts/**/*.js', ['html']);
+    gulp.watch(['src/assets/styles/**/*.scss', 'src/assets/scripts/**/*.js', 'src/**/*.html'], ['html']);
     gulp.watch('src/assets/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
@@ -135,7 +134,7 @@ gulp.task('serve', () => {
 
 // inject bower components (and keep within src)
 gulp.task('wiredep', () => {
-  gulp.src('src/assets/styles/*.scss')
+  gulp.src('src/assets/styles/**/*.scss')
     .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       ignorePath: /^(\.\.\/)+/
