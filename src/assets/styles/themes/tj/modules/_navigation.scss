@@ -1,5 +1,20 @@
-#mainNavWrapper {
-	background-color: rgba($black,.75);
+.bg-nav-colored {
+	background-color: rgba($black,.95);
+	text-shadow: inherit;
+	.nav-item {
+		.nav-link {
+			color: $white;
+		}
+	}
+}
+.bg-nav-transparent {
+	background-color: rgba($black,.15);
+	text-shadow: 2px 2px 10px #000000;
+	.nav-item {
+		.nav-link {
+			color: $white;
+		}
+	}
 }
 
 .sidebar-wrapper {
@@ -42,4 +57,7 @@
 
 .sidebar-head {
 	margin-bottom: 1rem;
+}
+#sidebarToggler {
+	border: 1px solid $brand-inverse !important;
 }

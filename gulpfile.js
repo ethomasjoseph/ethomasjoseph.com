@@ -118,7 +118,7 @@ gulp.task('jekyll', function() {
 gulp.task('clean', del.bind(null, ['_site']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], 'jekyll', () => {
+  runSequence(['clean', 'wiredep'], ['html', 'fonts'], () => {
     browserSync.init({
       notify: true,
       proxy: "localhost:4000",
@@ -135,8 +135,8 @@ gulp.task('serve', () => {
       'app/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch('src/assets/styles/**/*.scss', ['styles']);
-    gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/assets/styles/**/*.scss', ['html']);
+    gulp.watch('src/assets/scripts/**/*.js', ['html']);
     gulp.watch('src/**/*.html', ['htmlonly']);
     gulp.watch('src/assets/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -148,6 +148,7 @@ gulp.task('wiredep', () => {
   // gulp.src('src/assets/styles/**/*.scss')
   //   .pipe($.filter(file => file.stat && file.stat.size))
   //   .pipe(wiredep({
+  //     exclude: ['bootstrap'],
   //     ignorePath: /^(\.\.\/)+/
   //   }))
   //   .pipe(gulp.dest('src/assets/styles'));
