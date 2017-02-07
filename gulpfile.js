@@ -53,12 +53,14 @@ gulp.task('lint', () => {
   return lint('src/assets/scripts/**/*.js')
     .pipe(gulp.dest('src/assets/scripts'));
 });
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js')
-    .pipe(gulp.dest('test/spec'));
-});
 
 gulp.task('html', ['styles', 'scripts'], () => {
+  return new Promise(resolve => {
+    runSequence('htmlonly', resolve);
+  });
+});
+
+gulp.task('htmlonly', () => {
   return gulp.src('src/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
     .pipe($.if('*.js', $.uglify()))
@@ -102,12 +104,13 @@ function jekyllLogger(color) {
 
 gulp.task('jekyll', function() {
   var jekyllProc = child.exec("bundle exec jekyll serve --baseurl '' --incremental --watch --force_polling");
-  
-  jekyllProc.stdout.on('data', jekyllLogger('blue'));
-  jekyllProc.stderr.on('data', jekyllLogger('red'));
+  return Promise.all([
+      jekyllProc.stdout.on('data', jekyllLogger('blue')),
+      jekyllProc.stderr.on('data', jekyllLogger('red'))
+    ]);
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', '_site']));
+gulp.task('clean', del.bind(null, ['_site']));
 
 gulp.task('serve', () => {
   runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], 'jekyll', () => {
@@ -121,12 +124,15 @@ gulp.task('serve', () => {
     });
 
     gulp.watch([
-      'src/assets/*.html',
-      'src/assets/images/**/*',
+      'app/**/*.html',
+      'app/assets/styles/**/*.scss',
+      'app/assets/scripts/**/*.js',
       'app/fonts/**/*'
     ]).on('change', reload);
 
-    gulp.watch(['src/assets/styles/**/*.scss', 'src/assets/scripts/**/*.js', 'src/**/*.html'], ['html']);
+    gulp.watch('src/assets/styles/**/*.scss', ['styles']);
+    gulp.watch('src/assets/scripts/**/*.js', ['scripts']);
+    gulp.watch('src/**/*.html', ['htmlonly']);
     gulp.watch('src/assets/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
@@ -134,14 +140,15 @@ gulp.task('serve', () => {
 
 // inject bower components (and keep within src)
 gulp.task('wiredep', () => {
-  gulp.src('src/assets/styles/**/*.scss')
-    .pipe($.filter(file => file.stat && file.stat.size))
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('src/assets/styles'));
+  // gulp.src('src/assets/styles/**/*.scss')
+  //   .pipe($.filter(file => file.stat && file.stat.size))
+  //   .pipe(wiredep({
+  //     ignorePath: /^(\.\.\/)+/
+  //   }))
+  //   .pipe(gulp.dest('src/assets/styles'));
 
   gulp.src('src/**/*.html')
+    .pipe($.filter(file => file.stat && file.stat.size))
     .pipe(wiredep({
       exclude: ['bootstrap'],
       ignorePath: /^(\.\.\/)*\.\./

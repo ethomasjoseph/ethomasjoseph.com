@@ -1,0 +1,42 @@
+
+.sidebar-wrapper {
+  display: none;
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0;
+  border-left: 2px solid darken($brand-primary, 50%);
+  background-color: $brand-inverse;
+  z-index: 1000;
+  overflow-x: hidden;
+  transition: 300ms ease;
+}
+
+.sidebar {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+	    width: 100%;
+		a {
+		    padding: 0.5rem 0.5rem 0.5rem 2rem;
+		    text-decoration: none;
+		    display: block;
+	  		transition: 500ms ease;
+		}
+	}
+}
+
+.btn-sidebar-close {
+	margin: 0.5rem 1rem;
+	font-size: 2.2rem;
+	&:hover, &:focus {
+		background-color: $brand-inverse !important;
+	}
+}
+
+.sidebar-head {
+	margin-bottom: 1rem;
+}

@@ -6,7 +6,6 @@ $icon-font-path: '../../../fonts/';
 // endbower
 
 
-// custom variables here so that we can override any if we like so.
-@import "variables";
+@import "variables"; // custom variables here so that we can override
 @import "site";
 @import "modules/navigation";
