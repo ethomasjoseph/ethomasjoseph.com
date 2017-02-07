@@ -20,20 +20,20 @@
 
   </head>
   <body>
-    <nav class="navbar navbar-static navbar-toggleable-sm fixed-top navbar-inverse bg-inverse">
-      <div class="container">
-        <a class="navbar-brand mr-auto" href="#">Thomas Joseph</a>
+    <nav id="mainNavWrapper" class="navbar navbar-static navbar-toggleable-sm fixed-top navbar-inverse">
+      <div id="stickyDesktopNav" class="container">
+        <a id="navbarBrand" class="navbar-brand hidden-md-up" href="#">Thomas Joseph</a>
         <!-- Desktop Navigation -->
-        <div class="float-right">
+        <div id="stickyDesktopNavLinks" class="mx-auto">
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="nav-item pull-xs-right">
-                <a class="nav-link" href="#">Developer<span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Developer</a>
               </li>
-              <li class="nav-item pull-xs-right">
+              <li class="nav-item">
                 <a class="nav-link disabled" href="#">Musings</a>
               </li>
-              <li class="nav-item pull-xs-right">
+              <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
             </ul>
@@ -58,39 +58,6 @@
         </ul>
       </div>
     </nav>
-    <!-- <nav class="navbar navbar-static navbar-toggleable-sm fixed-top navbar-inverse bg-inverse">
-      <button id="sidebarToggler" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container">
-          <a class="navbar-brand" href="#">Thomas Joseph</a>
-
-          <div class="collapse navbar-collapse justify-content-center">
-            <ul class="nav navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Developer<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Musings</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="sidebar" class="sidebar-wrapper hidden-md-up">
-          <div class="sidebar-head text-right">
-            <button class="navbar-toggler btn-sidebar-close" >&times;</button>
-          </div>
-          <ul class="sidebar clearfix">
-            <li>
-              <a href="#">Signup</a>
-            </li>
-            <!-- insert more side-items if you so choose - - >
-          </ul>
-        </div>
-    </nav> -->
 
 
 
@@ -150,7 +117,8 @@
     <!-- endbuild -->
     
     <!-- build:js assets/scripts/main.js -->
-    <script src="assets/scripts/main.js"></script>
+    <script src="assets/scripts/site.js"></script>
+    <script src="assets/scripts/modules/navigation.js"></script>
     <!-- endbuild -->
   </body>
 </html>

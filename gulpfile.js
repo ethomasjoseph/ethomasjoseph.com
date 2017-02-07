@@ -61,11 +61,16 @@ gulp.task('html', ['styles', 'scripts'], () => {
 });
 
 gulp.task('htmlonly', () => {
+  var htmlmin = $.htmlmin({collapseWhitespace: true});
+  htmlmin.on('error',function(e){
+    console.log(e);
+  });
   return gulp.src('src/**/*.html')
+    .pipe($.plumber())
     .pipe($.useref({searchPath: ['.tmp', 'src', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if('*.html', htmlmin))
     .pipe(gulp.dest('app'));
 });
 
