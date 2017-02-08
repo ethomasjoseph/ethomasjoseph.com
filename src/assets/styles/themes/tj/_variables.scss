@@ -1,3 +1,33 @@
+/* Custom variables */
+// Brand Colors // Palette URL: http://paletton.com/#uid=10H0I0k2c8v003f00bThRh4nfmC */
+
+$color-primary-1: #000000;
+$color-primary-2: #FFFFFF;
+$color-primary-3: #01B1C0;
+
+$color-secondary-1: #333333;
+$color-secondary-2: #666666;
+$color-secondary-3: #999999;
+$color-secondary-4: #CCCCCC;
+$color-secondary-5: #EEEEEE;
+
+$font-family-masthead: "Varela Round";
+$font-family-cursive: "Dancing Script";
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Dancing+Script|Raleway|Roboto+Slab|Varela+Round');
+
+$font-family-sans-serif: Raleway, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      "Roboto Slab", Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  "Cutive Mono", Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
+
+// FontAwesome Variable Overrides =============================
 $fa-font-path: "../../../fonts" !default;
 
-/* Custom variables */
+
+// Bootstrap Variable Overrides ===============================
+$brand-primary:             $color-primary-3 !default;
+$headings-font-family:   $font-family-serif !default;
+

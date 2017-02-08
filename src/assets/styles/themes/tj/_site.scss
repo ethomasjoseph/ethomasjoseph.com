@@ -1,1 +1,9 @@
 /* Site - Global Styles for this theme variables */
+.masthead-text {
+	font-family: $font-family-masthead;
+}
+
+.masthead {
+	@extend .masthead-text;
+	font-size: 3.3rem;
+}
