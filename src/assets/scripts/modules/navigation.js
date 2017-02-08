@@ -11,11 +11,9 @@ tjs.Navigation = (function(context, $) {
             if ($(document).scrollTop() > 50) {
                 $('#navbarBrand').addClass('mr-auto').removeClass('hidden-md-up');
                 $('#stickyDesktopNavLinks').removeClass('mx-auto');
-                $('#mainNavWrapper').addClass('bg-nav-colored').removeClass('bg-nav-transparent');
             } else {
                 $('#navbarBrand').addClass('hidden-md-up');
                 $('#stickyDesktopNavLinks').addClass('mx-auto');
-                $('#mainNavWrapper').removeClass('bg-nav-colored').addClass('bg-nav-transparent');
             }
         });
     };
