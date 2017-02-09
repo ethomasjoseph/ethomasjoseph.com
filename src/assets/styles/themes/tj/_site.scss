@@ -33,3 +33,49 @@
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
+
+.promo-card-img-overlay {
+	position: absolute;
+	color: $gray-lighter;
+	font-size: 0.85rem;
+    width: 100%;
+    bottom: 0;
+    padding: 0 1rem .5rem .5rem;
+    background-image: linear-gradient(to bottom, rgba(25,35,45,0) 0%,rgba(0,0,0,0.8) 100%);
+    a {
+    	color: $gray-lighter;
+    }
+    .promo-card-category a {
+    	color: $white;
+    	background-color: $brand-primary;
+	    font-size: .65rem;
+	    text-transform: uppercase;
+	    text-align: left;
+	    padding: .2rem .4rem;
+	    margin-bottom: 0.6rem;
+	    display: inline;
+	    font-weight: 700;
+    }
+    .promo-card-title a {
+    	color: $white;
+    	text-shadow: 0.15rem 0.15rem 0.33rem $black;
+		&:hover, &:focus {
+			text-decoration: none;
+			color: rgba(255,255,255, 0.75);
+		}
+    }
+}
+
+.promo-img-wrapper {
+	position: relative;
+	padding: 0;
+    display: flex;
+    a {
+    	width: 100%;
+    }
+
+    .promo-img {
+    	width: 100%;
+    }
+}
+
