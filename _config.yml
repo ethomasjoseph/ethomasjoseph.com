@@ -1,6 +1,6 @@
 # This is the default format.
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /developer/blog/:year/:month/:title:output_ext
+permalink: /developerhub/blog/:year/:month/:title:output_ext
 markdown: kramdown
 kramdown:
   input: GFM

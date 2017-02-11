@@ -23,8 +23,11 @@
     <nav id="mainNavWrapper" class="navbar navbar-static navbar-toggleable-sm fixed-top navbar-inverse bg-inverse">
       <div id="stickyDesktopNav" class="container">
         <a id="navbarBrand" class="navbar-brand hidden-md-up text-primary masthead-brand" href="#">
-          <div class="masthead-text" style="font-size: 0.6rem;"><b>THOMAS</b> JOSEPH</div>
-          <div class="" style="font-size: 0.75rem;"><span style="color:#fff;">Developer</span><span style="color:#999999;"><b>Hub</b></span></div>
+          <div style="display:inline-block;">
+            <div class="masthead-text" style="font-size: 0.6rem;"><b>THOMAS</b> JOSEPH</div>
+            <div class="" style="font-size: 0.75rem;"><span style="color:#fff;">Developer</span><span style="color:#999999;"><b>Hub</b></span></div>
+          </div>
+          <div style="float: right; display: inline-block; padding-bottom: -1rem; margin-top: -6px; margin-left: 0.25rem;"><span style="font-size: 1.9rem; color: #fff;">blog</span></div>
         </a>
         <!-- Desktop Navigation -->
         <div id="stickyDesktopNavLinks" class="mx-auto">
@@ -84,8 +87,9 @@
         <section class="page col-12">
           <div class="col-12 text-center">
               <div class="masthead-text" style="font-size: 2rem; color:#00BDAD; line-height: 1rem; margin-top: 2rem;"><b>THOMAS</b> JOSEPH</div>  
-              <h1 class="mb-4 mt-4" style="font-family: Raleway; color: #fff; text-shadow: 0.17rem 0.15rem 0.3rem #000, -0.09rem -0.09rem 0.4rem #fff; margin-top: 0.5rem;">Developer<span style="color:#999999"><b>Hub</b></span></h1>
-              <p class="lead" style="color: #fff; text-shadow: 0.17rem 0.15rem 0.3rem #000, -0.09rem -0.09rem 0.4rem #fff;">Musings on software, technology, marketing, business and everything related to my passion &amp; profession</p>
+              <h1 class="mb-4 mt-4" style="font-family: Raleway; color: #fff; text-shadow: 0.17rem 0.15rem 0.3rem #000, -0.09
+              rem -0.09rem 0.4rem #fff; margin-top: 0.5rem;">Developer<span style="color:#999999">Hub</span> blog</h1>
+              <p class="lead" style="color: #fff; text-shadow: 0.17rem 0.15rem 0.3rem #000, -0.09rem -0.09rem 0.4rem #fff;"> Blogs on software, technology, marketing, business and everything related to my passion &amp; profession</p>
           </div>
         </section>
       </div>
@@ -94,15 +98,14 @@
     <div class="container">
       <nav class="breadcrumb">
         <a class="breadcrumb-item" href="#">Home</a>
-        <span class="breadcrumb-item active">DeveloperHub</span>
+        <a class="breadcrumb-item" href="#">DeveloperHub</a>
+        <span class="breadcrumb-item">DeveloperHub blog</span>
       </nav>
     </div>
 
-    <!-- Commented Out till we have good content to support this. This can also be the categories as well. -->
-
-<!--     <div class="container">
+    <!-- <div class="container">
       <div class="row">
-        <div class="col-xs col-sm-6 col-md-3 push-md-3">
+        <div class="col-xs col-sm-6 col-md-3">
           <div class="card promo-card">
             <div class="card-block promo-img-wrapper">
               <a href="#story-link">
@@ -114,7 +117,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xs col-sm-6 col-md-3 push-md-3">
+        <div class="col-xs col-sm-6 col-md-3">
           <div class="card promo-card">
             <div class="card-block promo-img-wrapper">
               <a href="#story-link">
@@ -126,6 +129,30 @@
             </div>
           </div>
         </div>
+        <div class="col-xs col-sm-6 col-md-3">
+          <div class="card promo-card">
+            <div class="card-block promo-img-wrapper">
+              <a href="#story-link">
+                <img class="card-img-top card-img-bottom img-fluid promo-img" src="http://68.media.tumblr.com.rsz.io/230cbd5a43b66061f4c8756a83b6ce65/tumblr_nqx7pp3iyj1tubinno1_1280.jpg?width=250" style="height:5rem" alt="Card image cap">
+              </a>
+              <div class="card-block promo-card-img-overlay">
+                <h4 class="promo-card-title text-center"><a href="#story-link">Categories</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs col-sm-6 col-md-3">
+          <div class="card promo-card">
+            <div class="card-block promo-img-wrapper">
+              <a href="#story-link">
+                <img class="card-img-top card-img-bottom img-fluid promo-img" src="https://images.unsplash.com/photo-1481761318669-f91951c456f7?dpr=1&auto=format&fit=crop&w=250" style="height:5rem" alt="Card image cap">
+              </a>
+              <div class="card-block promo-card-img-overlay">
+                <h4 class="promo-card-title text-center"><a href="#story-link">Tags</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div> -->
 
@@ -133,98 +160,57 @@
       <div class="row text-center">
         <section class="page col-12">
           <div class="col-12 text-center">
-              <h1 class="mb-4 mt-4">Featured on DeveloperHub</h1>
+              <h1 class="mb-4 mt-4">Latest Blogs</h1>
           </div>
         </section>
       </div>
-      <div class="row">
-        <div class="col-xs col-sm-6 col-lg-4">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/1" alt="Card image cap">
-              </a>
-              <div style="position: absolute; padding: 0.5rem; right: 0;">
-                <a href="#" style="background: #000; font-size: 0.85rem; padding: 0.2rem 0.4rem; font-weight: bolder; right: 0; text-align: right">ARTICLE</a>
-              </div>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">Card title</a></h4>
-                <p class="card-text"><a href="#story-link">Some quick example text to build on the card title and make up the bulk of the card's content.</a></p>
-              </div>
-            </div>
-          </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-8">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <p><time>12-March-2016</time> &middot; <b>CATEGORY 1</b> &middot; <em>JavaScript, Angular, ReactJS, React Native</em></p>
         </div>
-        <div class="col-xs col-sm-6 col-lg-4">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/2" alt="Card image cap">
-              <div style="position: absolute; padding: 0.5rem; right: 0;">
-                <a href="#" style="background: #000; font-size: 0.85rem; padding: 0.2rem 0.4rem; font-weight: bolder; right: 0; text-align: right">BLOG</a>
-              </div>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">Universal Applications with Universal JavaScript</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs col-sm-6 col-lg-4 ">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/4" alt="Card image cap">
-              </a>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">The rise of AI and headless CMS</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs col-sm-6 col-lg-4">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/5" alt="Card image cap">
-              </a>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">Card title</a></h4>
-                <p class="card-text"><a href="#story-link">Some quick example text to build on the card title and make up the bulk of the card's content.</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs col-sm-6 col-lg-4">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/6" alt="Card image cap">
-              </a>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">Universal Applications with Universal JavaScript</a></h4>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs col-sm-6 col-lg-4 ">
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
-              <a href="#story-link">
-                <img class="card-img-top img-fluid promo-img" src="http://lorempixel.com/350/260/technics/8" alt="Card image cap">
-              </a>
-              <div class="card-block promo-card-img-overlay">
-                <div class="promo-card-category"><a href="#category-link">Main Category 1</a></div>
-                <h4 class="promo-card-title"><a href="#story-link">The rise of AI and headless CMS</a></h4>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-4">
+          <img class="featurette-image img-fluid mx-auto" src="http://lorempixel.com/350/260/technics/1">
         </div>
       </div>
-    </div> <!-- /container -->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-8 push-md-4">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-4 pull-md-8">
+          <img class="featurette-image img-fluid mx-auto" src="http://lorempixel.com/350/260/technics/2">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-8">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-4">
+          <img class="featurette-image img-fluid mx-auto" src="http://lorempixel.com/350/260/technics/3">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-8 push-md-4">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-4 pull-md-8">
+          <img class="featurette-image img-fluid mx-auto" src="http://lorempixel.com/350/260/technics/4">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <div class="row">
+        <a href="/blog/archive.html" class="btn btn-outline-primary mx-auto">Archived Posts</a>
+      </div>
+    </div>
 
 
     <footer class="footer-row">
