@@ -61,7 +61,16 @@ gulp.task('html', ['styles', 'scripts'], () => {
 });
 
 gulp.task('htmlonly', () => {
-  var htmlmin = $.htmlmin({collapseWhitespace: true});
+  var htmlmin = $.htmlmin(
+    {
+      collapseWhitespace: true,
+      ignoreCustomFragments: [
+        /<%[\s\S]*?%>/,
+        /<\?[\s\S]*?\?>/,
+        /{{[\s\S]*?}}/
+      ]
+    }
+  );
   htmlmin.on('error',function(e){
     console.log(e);
   });

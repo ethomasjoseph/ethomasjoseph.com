@@ -1,0 +1,18 @@
+{% comment %}
+<!--
+  - Wrapper for setup
+  -->
+{% endcomment %}
+
+{% include JB/setup %}
+{% if page.section and page.section != '' %}
+	{% assign SECTION_NAME = page.section %}
+{% else %}
+	{% assign SECTION_NAME = "main" %}
+{% endif %}
+{% for section in site.data.sections %} 
+	{% if section.name == SECTION_NAME %}
+		{% assign SECTION = section %}
+	{% endif %}
+{% endfor %}
+{% assign SECTION_NAME = nil %}

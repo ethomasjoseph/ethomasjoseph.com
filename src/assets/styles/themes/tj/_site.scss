@@ -58,7 +58,7 @@
     }
     .promo-card-title a {
     	color: $white;
-    	text-shadow: 0.15rem 0.15rem 0.33rem $black;
+    	text-shadow: 0.17rem 0.15rem 0.3rem $black, -0.09rem -0.09rem 0.4rem $white;
 		&:hover, &:focus {
 			text-decoration: none;
 			color: rgba(255,255,255, 0.75);
@@ -68,6 +68,7 @@
 
 .promo-img-wrapper {
 	position: relative;
+	background-image: linear-gradient(to bottom, rgba(100,100,100,0.2) 50%,rgba(0,0,0,0.8) 100%);
 	padding: 0;
     display: flex;
     a {
@@ -77,5 +78,14 @@
     .promo-img {
     	width: 100%;
     }
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
 }
 
