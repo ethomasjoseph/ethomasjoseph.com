@@ -3,41 +3,26 @@
           {% include utils/first-image entry=entry %}
           {% capture tjimage %}{% if entry.promoImage %}{{entry.promoImage}}{% else %}{{ FIRST_IMAGE }}{% endif %}{% endcapture %}
 
-          {% if tjimage and tjimage.size > 0 %}
-          <div class="card promo-card">
-            <div class="card-block promo-img-wrapper">
+          
+          <div class="card promo-card bg-faded">
+            {% if tjimage and tjimage.size > 0 %}
               <a>
                 <img class="card-img-top img-fluid promo-img" src="{{ tjimage }}">
               </a>
-              <div class="card-block promo-card-img-overlay">
-                {% if entry.categories.size > 0 %}
-                <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>
-                {% endif %}
-                <h5 class="promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
-                <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 20}}{% endif %}</a></p>
-                <footer>
-                  <small>
-                    <time>{{entry.date | date: "%Y-%m-%d" }}</time>
-                  </small>
-                </footer>
-              </div>
+            {% endif %}
+            {% assign tjimage = nil %}
+            <div class="card-block">
+              {% if entry.categories.size > 0 %}
+              <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>
+              {% endif %}
+              <h5 class="promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
+              <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary | truncatewords: 30 }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 25}}{% endif %}</a></p>
+              <footer>
+                <small>
+                  <time>{{entry.date | date: "%d-%b-%Y" }}</time>
+                </small>
+              </footer>
             </div>
           </div>
-          {% else %}
-          <div class="card promo-card bg-faded p-3">
-            {% if entry.categories.size > 0 %}
-            <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>
-            {% endif %}
-            <h5 class="promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
-            <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 15}}{% endif %}</a></p>
-            <footer>
-              <small>
-                <time>{{entry.date | date: "%Y-%m-%d" }}</time>
-              </small>
-            </footer>
-          </div>
-          {% endif %}
-          {% assign tjimage = nil %}
-
         {% endfor %}
         </div>

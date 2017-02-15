@@ -38,13 +38,6 @@ hideLogoInit: true
     </div>
 
     <div class="container">
-      <div class="row text-center">
-        <section class="page col-12">
-          <div class="col-12 text-center">
-              <h2 class="mb-4 mt-4">Featured Content</h2>
-          </div>
-        </section>
-      </div>
       <div class="row">
         {% include themes/{{ site.JB.theme }}/fragments/col-promo-card.html entries=site.posts limit=10 %}
       </div>
