@@ -29,8 +29,11 @@ hideLogoInit: true
                 </div>
               </div>
             </div>
-            <div class="text-center">
-                <a href="#" class="btn btn-lg btn-outline-primary mx-auto">Learn more</a>
+            <div class="row text-center">
+              <div class="text-center mx-auto">
+                <a href="/developerhub/blog" class="btn btn-lg btn-primary">Read Blogs</a>
+                <a href="/about" class="btn btn-lg btn-outline-primary">Learn more</a>
+              </div>
             </div>
           </div>
         </div>
@@ -41,4 +44,4 @@ hideLogoInit: true
       <div class="row">
         {% include themes/{{ site.JB.theme }}/fragments/col-promo-card.html entries=site.posts limit=10 %}
       </div>
-    </div> <!-- /container -->
+    </div>
