@@ -1,14 +1,14 @@
+      {% include utils/find-host %}
       {% for entry in include.entries limit:include.limit  %}
         {% include utils/find-featured-image entry=entry %}
         <div class="row featurette">
           {% assign ctrmod =  forloop.index | modulo: 2 %}
           <div class="col-md-9 {% if ctrmod == 0 %}{% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}push-md-3{% else %}push-md-2{% endif %}{% endif %}">
+            <time class="text-muted">{{entry.date | date: "%A, %d-%b-%Y" }}</time>
             <h3 class="featurette-heading promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
             <p class="lead">{% if entry.summary %}{{ entry.summary }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 30}}{% endif %}</p>
             <p>
-              <time class="text-muted">{{entry.date | date: "%A, %d-%b-%Y" }}</time>
               <b>{% if entry.categories.size > 0 %}
-                &middot; 
                 <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>
                 {% endif %}
               </b>
@@ -21,6 +21,14 @@
                 {% endfor %}
               </span>
               {% endif %}
+              <span class="d-block mt-2">
+                <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<a href="{{ HOST }}{{entry.url}}#disqus_thread" class="comments">&nbsp;Comments</a></span>
+                {% include utils/find-readtime entry=entry %}
+                {% if READ_TIME %}
+                  &middot; <span class="read-time"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ READ_TIME }} mins read</span>
+                {% endif %}
+                {% assign READ_TIME = nil %}
+              </span>
             </p>
           </div>
           {% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}

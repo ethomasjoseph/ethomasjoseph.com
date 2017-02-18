@@ -19,29 +19,14 @@
 		        <time class="text-muted">{{page.date | date: "%A, %d-%b-%Y" }}</time>
 		        {% include utils/find-author %}
 		        {% if AUTHOR %}<span class="mt-1 mb-1">&nbsp;|&nbsp; By <a href="{{ AUTHOR.profileUrl }}" rel="author" class="author">{{ AUTHOR.name }}</a></span>{% endif %}
-
-		        {% assign WORD_COUNT = page.content | number_of_words %}
-		        {% if WORD_COUNT > 250 %}
-		        	{% assign READ_TIME_MAIN = WORD_COUNT | divided_by: 130 %}
-		        	{% assign READ_TIME_REMAINDER = WORD_COUNT | modulo: 130 %}
-		        	{% if READ_TIME_REMAINDER > 20 %}
-		        		{% assign READ_TIME = READ_TIME_MAIN | plus : 1 %}
-		        	{% else %}
-		        		{% assign READ_TIME = READ_TIME_MAIN %}
-		        	{% endif %}
+		        {% include utils/find-readtime entry=page %}
+		        {% if READ_TIME %}
 		        	<span class="read-time d-block small"><i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ READ_TIME }} mins read</span>
-		        	{% assign WORD_COUNT = nil %}
-		        	{% assign READ_TIME_MAIN = nil %}
-		        	{% assign READ_TIME_REMAINDER = nil %}
-		        	{% assign READ_TIME = nil %}
 		        {% endif %}
+		        {% assign READ_TIME = nil %}
 	        </div>
 	        <h1 class="mt-2">{{ page.title }}</h1>
-	        {% if site.url contains "0.0.0.0" %}
-	        	{% assign HOST = site.url |replace_first: "0.0.0.0", "localhost" %}
-	        {% else %}
-	        	{% assign HOST = site.url %}
-	        {% endif %}
+	        {% include utils/find-host %}
 	        <a href="#comments" class="comments"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<span class="disqus-comment-count" data-disqus-url="{{ HOST }}{{page.url}}">Comments</span></a>
 	        {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
 	      </div>
@@ -86,6 +71,5 @@
 	</div> <!-- /.container -->
 	{% include {{THEME_BASE_PATH}}/structure/footer.html %}
 	{% include {{THEME_BASE_PATH}}/structure/footerlibs.html %}
-	<script id="dsq-count-scr" src="//{{ site.JB.comments.disqus.short_name }}.disqus.com/count.js" async></script>
 </body>
 </html>
