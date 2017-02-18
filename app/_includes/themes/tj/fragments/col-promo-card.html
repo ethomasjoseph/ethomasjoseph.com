@@ -1,3 +1,4 @@
+    {% include utils/find-host %}
         <div class="card-columns">
         {% for entry in include.entries limit:include.limit  %}
           {% include utils/find-featured-image entry=entry %}      
@@ -16,7 +17,8 @@
               <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary | truncatewords: 30 }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 25}}{% endif %}</a></p>
               <footer>
                 <small>
-                  <time>{{entry.date | date: "%d-%b-%Y" }}</time>
+                  <time>{{entry.date | date: "%d-%b-%Y" }}</time> &middot; 
+                  <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<a href="{{ HOST }}{{entry.url}}#disqus_thread" class="comments text-primary">&nbsp;Comments</a></span>
                 </small>
               </footer>
             </div>
