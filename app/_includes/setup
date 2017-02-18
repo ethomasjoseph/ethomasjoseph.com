@@ -7,6 +7,8 @@
 {% include JB/setup %}
 {% if page.section and page.section != '' %}
 	{% assign SECTION_NAME = page.section %}
+{% elsif layout.section and layout.section != '' %}
+	{% assign SECTION_NAME = layout.section %}
 {% else %}
 	{% assign SECTION_NAME = "main" %}
 {% endif %}

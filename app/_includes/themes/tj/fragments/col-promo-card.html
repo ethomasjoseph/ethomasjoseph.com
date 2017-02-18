@@ -1,16 +1,13 @@
         <div class="card-columns">
         {% for entry in include.entries limit:include.limit  %}
-          {% include utils/first-image entry=entry %}
-          {% capture tjimage %}{% if entry.promoImage %}{{entry.promoImage}}{% else %}{{ FIRST_IMAGE }}{% endif %}{% endcapture %}
-
-          
+          {% include utils/find-featured-image entry=entry %}      
           <div class="card promo-card bg-faded">
-            {% if tjimage and tjimage.size > 0 %}
+            {% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}
               <a>
-                <img class="card-img-top img-fluid promo-img" src="{{ tjimage }}">
+                <img class="card-img-top img-fluid promo-img" src="{{ FEATURED_IMAGE }}">
               </a>
             {% endif %}
-            {% assign tjimage = nil %}
+            {% assign FEATURED_IMAGE = nil %}
             <div class="card-block">
               {% if entry.categories.size > 0 %}
               <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>

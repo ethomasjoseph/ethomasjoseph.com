@@ -1,11 +1,11 @@
     <div class="container">
-    	<nav class="breadcrumb">
+        <nav class="breadcrumb">
     	{% for breadcrumb in SECTION.breadcrumb %}
-    		{% if breadcrumb.link == page.url %}
+    		{% if forloop.last %}
 					<span class="breadcrumb-item active">{{breadcrumb.title}}</span>
 				{% else %}
 					<a class="breadcrumb-item" href="{{breadcrumb.link}}">{{breadcrumb.title}}</a>
 				{% endif %}
 			{% endfor %}
-      </nav>
+        </nav>
     </div>

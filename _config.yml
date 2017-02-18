@@ -28,6 +28,7 @@ title: "TJ's technology bliki"
 tagline: Driven by values. Powered by technology
 description: Musings on software, technology, marketing, business and everything related to my passion & profession
 author :
+  id: ethomasjoseph
   name : Thomas Joseph
   profile: Coding Architect
   email : ethomas.joseph@gmail.com
@@ -101,9 +102,9 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : false
+    provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : ethomasjoseph-tech
     livefyre :
       site_id : 123
     intensedebate :

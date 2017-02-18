@@ -1,34 +1,34 @@
       {% for entry in include.entries limit:include.limit  %}
-        {% include utils/first-image entry=entry %}
-        {% capture tjimage %}{% if entry.promoImage %}{{entry.promoImage}}{% else %}{{ FIRST_IMAGE }}{% endif %}{% endcapture %}
+        {% include utils/find-featured-image entry=entry %}
         <div class="row featurette">
           {% assign ctrmod =  forloop.index | modulo: 2 %}
-          <div class="col-md-8 {% if ctrmod == 0 %}{% if tjimage and tjimage.size > 0 %}push-md-4{% else %}push-md-2{% endif %}{% endif %}">
+          <div class="col-md-9 {% if ctrmod == 0 %}{% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}push-md-3{% else %}push-md-2{% endif %}{% endif %}">
             <h3 class="featurette-heading promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
             <p class="lead">{% if entry.summary %}{{ entry.summary }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 30}}{% endif %}</p>
             <p>
-              <time>{{entry.date | date: "%d-%b-%Y" }}</time>
+              <time class="text-muted">{{entry.date | date: "%A, %d-%b-%Y" }}</time>
               <b>{% if entry.categories.size > 0 %}
                 &middot; 
                 <div class="promo-card-category"><a href="#{{ entry.categories[0] }}">{{ entry.categories[0] }}</a></div>
                 {% endif %}
               </b>
-              {% if entry.tags.size > 0 %} 
-              <em>
-                &middot;
-                {% for tag in entry.tags  %}
-                  {{ tag }} {% if forloop.last %}{% else %}, {% endif %}
+              {% if entry.tags.size > 0 %}
+              &middot; 
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              <span style="font-size: 1.2rem;">
+                {% for tag in entry.tags %}
+                <span class="badge pill badge-default bg-inverse"><a class="text-white" href="/tags.html#{{ tag }}">{{ tag }}</a></span>
                 {% endfor %}
-              </em>
+              </span>
               {% endif %}
             </p>
           </div>
-          {% if tjimage and tjimage.size > 0 %}
-          <div class="col-md-4 {% if ctrmod == 0 %}pull-md-8{% endif %}">
-              <a href="{{ entry.url }}"><img class="featurette-image img-fluid mx-auto" src="{{ tjimage }}"></a>  
+          {% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}
+          <div class="col-md-3 {% if ctrmod == 0 %}pull-md-9{% endif %}">
+              <a href="{{ entry.url }}"><img class="featurette-image img-fluid mx-auto" src="{{ FEATURED_IMAGE }}"></a>  
           </div>
           {% endif %}
-          {% assign tjimage = nil %}
+          {% assign FEATURED_IMAGE = nil %}
         </div>
         <hr class="featurette-divider">
       {% endfor %}

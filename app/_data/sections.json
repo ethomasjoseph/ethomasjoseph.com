@@ -33,7 +33,7 @@
 	},
 	{
 		"name": "developerhubBlog",
-		"_description" : "The Blog in the DeveloperHub section",
+		"_description" :"Blogs in the DeveloperHub section",
 		"title": "DeveloperHub blog | Thomas Joseph",
 		"homePath": "/developerhub/blog",
 		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg",
@@ -48,8 +48,34 @@
 				"link"	: "/developerhub"
 			},
 			{
-				"title" : "DeveloperHub blog",
+				"title" : "Blogs",
 				"link"	: "/developerhub/blog"
+			}
+		]
+	},
+	{
+		"name": "developerhubBlogPost",
+		"_description" : "The Blog Post in the DeveloperHub section",
+		"title": "DeveloperHub blog | Thomas Joseph",
+		"homePath": "/developerhub/blog",
+		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg",
+		"brandImageHeight" : "2rem",
+		"breadcrumb" : [
+			{
+				"title" : "Home",
+				"link"	: "/"
+			},
+			{
+				"title" : "DeveloperHub",
+				"link"	: "/developerhub"
+			},
+			{
+				"title" : "Blogs",
+				"link"	: "/developerhub/blog"
+			},
+			{
+				"title" : "Post",
+				"link"	: "#"
 			}
 		]
 	}
