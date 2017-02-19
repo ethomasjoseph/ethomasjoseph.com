@@ -1,8 +1,8 @@
 ---
 layout: null
 title : RSS Feed
+category: developerhub
 ---
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -14,7 +14,8 @@ title : RSS Feed
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <ttl>60</ttl>
 
-{% for post in site.posts limit:20 %}
+{% for post in site.posts limit:40 %}
+    {% if page.category == nil or  page.category == post.categories[0] %}
         <item>
                 <title>{{ post.title | xml_escape }}</title>
                 <description>{{ post.content | xml_escape }}</description>
@@ -22,6 +23,7 @@ title : RSS Feed
                 <guid>{{ site.production_url }}{{ post.id }}</guid>
                 <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         </item>
+    {% endif %}
 {% endfor %}
 
 </channel>

@@ -36,30 +36,30 @@
     a {
     	color: $gray;
     }
-    .promo-card-category a {
-    	color: $white;
-    	background-color: $brand-primary;
-	    font-size: .65rem;
-	    text-transform: uppercase;
-	    text-align: left;
-	    padding: .2rem .4rem;
-	    margin-bottom: 0.6rem;
-	    display: inline;
-	    font-weight: 700;
-    }
-    .promo-card-title a {
-    	color: $gray;
-    	text-shadow: 0.17rem 0.15rem 0.3rem $white;
-		&:hover, &:focus {
-			text-decoration: none;
-			color: $brand-primary;
-		}
-    }
+}
+.promo-card-stream a {
+	color: $white;
+	background-color: $brand-primary;
+    font-size: .65rem;
+    text-transform: uppercase;
+    text-align: left;
+    padding: .2rem .4rem;
+    margin-bottom: 0.6rem;
+    display: inline;
+    font-weight: 700;
+}
+.promo-card-title a {
+	color: $gray;
+	text-shadow: 0.17rem 0.15rem 0.3rem $white;
+	&:hover, &:focus {
+		text-decoration: none;
+		color: $brand-primary;
+	}
+}
 
-    .promo-img {
-    	width: 100%;
-    	text-align: center;
-    }
+.promo-img {
+	width: 100%;
+	text-align: center;
 }
 
 .card-columns {

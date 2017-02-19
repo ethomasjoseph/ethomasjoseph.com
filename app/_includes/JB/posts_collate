@@ -31,9 +31,12 @@ Usage:
       <h3>{{this_month}}</h3>
       <ul>
     {% endif %}
-  
-    <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  
+
+
+    {% if include.category == nil or  include.category == post.categories[0] %}
+      <li><span>{{ post.date | date: "%B %e, %Y" }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endif %}
+
     {% if forloop.last %}
       </ul>
     {% else %}
@@ -50,6 +53,7 @@ Usage:
         {% endif %}
       {% endif %}
     {% endif %}
+
   {% endfor %}
 {% endif %}
 {% assign posts_collate = nil %}
