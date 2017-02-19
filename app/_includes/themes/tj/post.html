@@ -42,11 +42,10 @@
 	        </div><!-- /.blog-post -->
 	        <hr>
 	        <div>
-	           {% if page.categories.size > 0 %}
-              	<div><strong>Categorized in </strong>
-              		{% for category in page.categories %}
-              		<span>{{category}}</span>
-              		{% endfor %}
+	           {% if page.stream %}
+              	<div>
+              		<strong>Categorized in </strong>
+              		<span class="text-uppercase promo-card-stream"><a href="#">{{ page.stream }}</a></span>
               	</div>
               {% endif %}
 	          
@@ -62,7 +61,7 @@
 	      </div><!-- /.blog-main -->
 		</div> <!-- /.row -->
 
-		<div class="row">
+		<div class="row mt-5">
 			<div class="col-12">
 				<a name="comments"></a>
 				{% include JB/comments %}

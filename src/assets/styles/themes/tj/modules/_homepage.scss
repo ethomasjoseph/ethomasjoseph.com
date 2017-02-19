@@ -1,16 +1,28 @@
 /* Home page specific Styles */
 
-.home-cover {
+@mixin imgCover ($image, $top: rgba(100,100,100, 0.35), $bottom: rgba(255,255,255, 0.5)) {
 	background-image:
 	    linear-gradient(
 	      to bottom, 
-	      rgba(100,100,100, 0.35),  
-	      rgba(255,255,255, 0.5)
+	      $top,  
+	      $bottom
 	    ),
-	    url(/assets/images/backgrounds/hudson-nyc-1080.jpg);
+	    url($image);
     background-repeat: no-repeat, no-repeat;
     background-position: center center, center center;
     background-size: cover, cover;
+}
+
+.home-cover {
+  @include imgCover('/assets/images/backgrounds/hudson-nyc-1080.jpg');
+}
+
+.developerhub-cover {
+   @include imgCover('/assets/images/backgrounds/developer-screen.png', rgba(0,0,0, 0.9), rgba(100,100,100, 0.8));
+}
+
+.developerhub-blog-cover {
+   @include imgCover('/assets/images/backgrounds/tech-blogging.jpg', rgba(0,0,0, 0.95), rgba(100,100,100, 0.8));
 }
 
 .profile-writup {
