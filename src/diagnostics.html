@@ -1,13 +1,88 @@
 ---
 ---
-{% include JB/setup %}{% include themes/tj/default.html %}<!doctype html>
+<!doctype html>
+{% include setup %}
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Diagnostics Page | Thomas Joseph</title>
 
-    <div class="container">
-      <div class="row text-center">
-        <section class="page col-12">
-          <div class="col-12 text-center">
-              <h1 class="mb-4 mt-4">Featured Content</h1>
-          </div>
-        </section>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css assets/styles/themes/tj/main.css -->
+    <link rel="stylesheet" href="/assets/styles/themes/tj/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <nav id="mainNavWrapper" class="navbar navbar-static navbar-toggleable-sm fixed-top navbar-inverse bg-inverse">
+      <div id="stickyDesktopNav" class="container">
+        <a id="navbarBrand" class="navbar-brand masthead-text text-primary" href="/"><b>THOMAS</b> JOSEPH</a>
       </div>
-    </div> <!-- /container -->
+	</nav>
+
+	<div class="container mt-5 pt-3">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Diagnostics Page</h1>
+				<p class="lead">This page has dual purpose of testing out some scripting and making sure that the gulp has a plain HTML to crunch and process the sass and js.</p>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-xs-12 col-md-8 push-md-2">
+				<p>The following table lists some of the Jekyll / Liquid variables to be tested across development and Github environment.</p>
+				<table class="table">
+				  <thead class="thead-inverse">
+				    <tr>
+				      <th>Expression</th>
+				      <th>Value</th>
+				      <th>Comments</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">site.time</th>
+				      <td>{{ site.time }}</td>
+				      <td>Last time this page was generated.</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">site.url</th>
+				      <td>{{ site.url }}</td>
+				      <td>See <a href="https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/">Here</a></td>
+				    </tr>
+				    <tr>
+				      <th scope="row">site.baseurl</th>
+				      <td>{{ site.baseurl }}</td>
+				      <td>See <a href="https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/">Here</a></td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+    <!-- build:js /assets/scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/tether/dist/js/tether.js"></script>
+    <!-- endbower -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js /assets/scripts/main.js -->
+    <script src="assets/scripts/site.js"></script>
+    <script src="assets/scripts/modules/navigation.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

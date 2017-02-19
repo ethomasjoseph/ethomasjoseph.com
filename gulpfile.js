@@ -64,10 +64,13 @@ gulp.task('htmlonly', () => {
   var htmlmin = $.htmlmin(
     {
       collapseWhitespace: true,
+      conservativeCollapse: true,
       ignoreCustomFragments: [
         /<%[\s\S]*?%>/,
         /<\?[\s\S]*?\?>/,
-        /{{[\s\S]*?}}/
+        /{{[\s\S]*?}}/, // ignore liquid script outputs
+        /{%[\s\S]*?%}/, // ignore liquid script expressions
+        /---[\s\S]*?---(\r)?\n/ // frontmatter
       ]
     }
   );
