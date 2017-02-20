@@ -7,7 +7,7 @@
               {% assign ctrmod =  forloop.index | modulo: 2 %}
               <div class="col-md-9 {% if ctrmod == 0 %}{% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}push-md-3{% else %}push-md-2{% endif %}{% endif %}">
                 <b>{% if entry.stream %}
-                  <div class="promo-card-stream"><a href="#{{ entry.stream }}">{{ entry.stream }}</a></div>
+                  <div class="promo-card-stream"><a href="{{ entry.categories[0] }}/streams.html#{{ entry.stream }}">{{ entry.stream }}</a></div>
                   {% endif %}
                 </b>
                 <time class="text-muted">{{entry.date | date: "%A, %d-%b-%Y" }}</time>
@@ -19,7 +19,7 @@
                   <i class="fa fa-tags" aria-hidden="true"></i>
                   <span style="font-size: 1.2rem;">
                     {% for tag in entry.tags %}
-                    <span class="badge pill badge-default bg-inverse"><a class="text-white" href="/tags.html#{{ tag }}">{{ tag }}</a></span>
+                    <span class="badge pill badge-default bg-inverse"><a class="text-white" href="/{{ entry.categories[0] }}/tags.html#{{ tag }}">{{ tag }}</a></span>
                     {% endfor %}
                   </span>
                   {% endif %}

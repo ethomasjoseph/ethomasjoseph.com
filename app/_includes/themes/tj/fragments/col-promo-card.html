@@ -13,7 +13,7 @@
                 {% assign FEATURED_IMAGE = nil %}
                 <div class="card-block">
                   {% if entry.stream %}
-                  <div class="promo-card-stream"><a href="#{{ entry.stream }}">{{ entry.stream }}</a></div>
+                  <div class="promo-card-stream"><a href="{{ entry.categories[0] }}/streams.html#{{ entry.stream }}">{{ entry.stream }}</a></div>
                   {% endif %}
                   <h5 class="promo-card-title"><a href="{{ entry.url }}">{{ entry.title }}</a></h5>
                   <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary | truncatewords: 30 }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 25}}{% endif %}</a></p>

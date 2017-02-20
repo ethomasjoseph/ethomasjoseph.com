@@ -16,18 +16,43 @@ Usage:
     
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
-
 {% if site.JB.tags_list.provider == "custom" %}
   {% include custom/tags_list %}
 {% else %}
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+  {% if tags_list.first[0] == null %} {% comment %} for supplied array of tags{% endcomment %}
+    {% for tag in tags_list %}
+      {% assign post_count = 0 | times: 1 %}
+      {% for post in  site.tags[tag] %}
+        {% if include.category == nil or post.categories[0] == include.category %}
+          {% assign post_count = post_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% if post_count and post_count > 0 %}
+      	<li><a href="{{ BASE_PATH }}/{{include.category}}{{ site.JB.tags_path }}#{{ tag | downcase | replace: ' ', '-' }}-ref">{{ tag }} <span>[{{ post_count }}]</span></a>
+        </li>
+        {% capture CATEGORY_TAGS %}{{CATEGORY_TAGS}},{{ tag }}{% endcapture%}
+      {% endif %}
+      {% assign post_count = nil %}
     {% endfor %}
-  {% else %}
-    {% for tag in tags_list %} 
-    	<li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+  {% else %} {% comment %} for supplied hash{% endcomment %}
+    {% for tag in tags_list %}
+      {% assign _tag = tag[0] %}
+      {% assign post_count = 0 | times: 1 %}
+      {% for post in  site.tags[_tag] %}
+        {% if include.category == nil or post.categories[0] == include.category %}
+          {% assign post_count = post_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+
+      {% if post_count and post_count > 0 %}
+      	<li><a href="{{ BASE_PATH }}/{{include.category}}{{ site.JB.tags_path }}#{{ tag[0] | downcase | replace: ' ', '-' }}-ref">{{ tag[0] }} <span>({{ post_count }})</span></a>
+        </li>
+        {% capture CATEGORY_TAGS %}{{CATEGORY_TAGS}},{{ tag[0] }}{% endcapture%}
+      {% endif %}
+      {% assign _tag = nil %}
     {% endfor %}
   {% endif %}
 {% endif %}
 {% assign tags_list = nil %}
+{% assign post_count = nil %}
+{% assign CATEGORY_TAGS = CATEGORY_TAGS|remove_first: ',' | split: ',' %}
