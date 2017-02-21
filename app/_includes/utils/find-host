@@ -1,5 +1,0 @@
-{% if site.url contains "0.0.0.0" %}
-	{% assign HOST = site.url |replace_first: "0.0.0.0", "localhost" %}
-{% else %}
-	{% assign HOST = site.url %}
-{% endif %}

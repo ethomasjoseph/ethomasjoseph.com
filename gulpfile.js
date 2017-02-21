@@ -14,6 +14,11 @@ const reload = browserSync.reload;
 
 var dev = true;
 
+gulp.task('config', () => {
+    return gulp.src('_config.yml')
+      .pipe(gulp.dest('docs'));
+});
+
 gulp.task('styles', () => {
   return gulp.src('src/assets/styles/**/*.scss')
     .pipe($.plumber())
@@ -130,7 +135,7 @@ gulp.task('jekyll', function() {
 gulp.task('clean', del.bind(null, ['_site']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['html', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['config', 'html', 'fonts'], () => {
     browserSync.init({
       notify: true,
       proxy: "localhost:4000",
@@ -174,7 +179,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('src'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras']);
+gulp.task('build', ['lint', 'config', 'html', 'images', 'fonts', 'extras']);
 
 gulp.task('default', () => {
   return new Promise(resolve => {
