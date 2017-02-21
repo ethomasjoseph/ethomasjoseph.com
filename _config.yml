@@ -9,7 +9,7 @@ kramdown:
 
 # Server
 source: app
-exclude: [blogger-import]
+exclude: [blogger-import, src]
 
 
 
