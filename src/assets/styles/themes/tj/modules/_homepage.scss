@@ -25,6 +25,26 @@
    @include imgCover('/assets/images/backgrounds/tech-blogging.jpg', rgba(0,0,0, 0.95), rgba(100,100,100, 0.8));
 }
 
+.masthead-brand {
+  font-family: $font-family-masthead;
+  font-size: 2rem;
+  color: $brand-primary;
+  line-height: 1rem;
+  margin-top: 2rem;
+}
+
+.masthead-heading {
+  font-family: $font-family-sans-serif;
+  color: $white;
+  text-shadow: 0.17rem 0.15rem 0.3rem $black;
+  margin-top: 0.5rem;
+}
+
+.masthead-lead {
+  color: $white;
+  text-shadow: 0.17rem 0.15rem 0.3rem $black;
+}
+
 .profile-writup {
 	background-image: linear-gradient(
       to bottom, 

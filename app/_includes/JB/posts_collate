@@ -42,6 +42,7 @@ Usage:
     {% else %}
       {% if this_year != next_year %}
         </ul>
+        <hr/>
         <h2>{{next_year}}</h2>
         <h3>{{next_month}}</h3>
         <ul>
@@ -53,7 +54,6 @@ Usage:
         {% endif %}
       {% endif %}
     {% endif %}
-
   {% endfor %}
 {% endif %}
 {% assign posts_collate = nil %}
