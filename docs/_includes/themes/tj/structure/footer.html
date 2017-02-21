@@ -1,0 +1,23 @@
+    <footer class="footer-row">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-12 text-center pt-2 pb-1">
+    <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img src="{{ site.data.sections[0].brandImagePath }}" style="height: {{ site.data.sections[0].brandImageHeight }}" class="img-fluid"/></a>
+                </div>
+                <div class="col-12 text-center pb-3">
+    <strong>Copyright &copy; {{author.name}} {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</strong>
+                </div>
+                <div class="col-12 text-center">
+    <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> unless otherwise stated.</p>
+                   <hr>
+                </div>
+            </div>
+            <div class="row flex-row">
+                <div class="col-12 text-center">
+                    {% include {{THEME_BASE_PATH}}/fragments/social-connect.html sizeclass="fa-2x" %}
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+    </footer>

@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tags
+header: Posts By Tag
+group: navigation
+section: developerhub
+category: developerhub
+---
+{% include setup %}
+<div class="container pt-5 mt-4">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 id="_top">{{page.title}}</h1>
+      <ul class="tag_box inline">
+        {% assign tags_list = site.tags %}  
+        {% include JB/tags_list category=page.category %}
+      </ul>
+    </div>
+  </div>
+  <hr/>
+  <div lass="row">
+    <div class="card-columns card-columns-tags">
+      {% for tag in CATEGORY_TAGS %} 
+        <div class="card promo-card bg-faded">
+          <div class="card-block">
+            <h4 id="{{ tag | downcase | replace: ' ', '-' }}-ref" class="text-uppercase">{{ tag }}</h4>
+            <ul>
+              {% assign pages_list = site.tags[tag] %}  
+              {% include JB/pages_list category=page.category %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div style="position: fixed; bottom: 0; right: 0; padding: 0.4rem;">
+    <strong><a href="#_top">Back to Top</a></strong>
+  </div>
+</div>

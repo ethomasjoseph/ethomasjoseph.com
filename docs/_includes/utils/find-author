@@ -1,0 +1,12 @@
+{% assign AUTHOR = nil %}
+{% if page.author %}
+	{% assign AUTHOR_ID = page.author %}
+{% else %}
+	{% assign AUTHOR_ID = site.author.id %}
+{% endif %}
+{% for author in site.data.authors %} 
+	{% if author.id == AUTHOR_ID %}
+		{% assign AUTHOR = author %}
+	{% endif %}
+{% endfor %}
+{% assign AUTHOR_ID = nil %}

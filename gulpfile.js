@@ -83,19 +83,19 @@ gulp.task('htmlonly', () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', htmlmin))
-    .pipe(gulp.dest('app'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('images', () => {
   return gulp.src('src/assets/images/**/*')
     .pipe($.cache($.imagemin()))
-    .pipe(gulp.dest('app/assets/images'));
+    .pipe(gulp.dest('docs/assets/images'));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(bowerFiles('**/*.{eot,svg,ttf,woff,woff2}',{debugging: false}, function (err) {})
     .concat('src/assets/fonts/**/*'))
-    .pipe(gulp.dest('app/assets/fonts'));
+    .pipe(gulp.dest('docs/assets/fonts'));
 });
 
 gulp.task('extras', () => {
@@ -104,7 +104,7 @@ gulp.task('extras', () => {
     '!src/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('app'));
+  }).pipe(gulp.dest('docs'));
 });
 
 // Jekyll
@@ -141,10 +141,10 @@ gulp.task('serve', () => {
     });
 
     gulp.watch([
-      'app/**/*.html',
-      'app/assets/styles/**/*.scss',
-      'app/assets/scripts/**/*.js',
-      'app/fonts/**/*'
+      'docs/**/*.html',
+      'docs/assets/styles/**/*.scss',
+      'docs/assets/scripts/**/*.js',
+      'docs/fonts/**/*'
     ]).on('change', reload);
 
     gulp.watch('src/assets/styles/**/*.scss', ['html']);

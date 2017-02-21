@@ -28,7 +28,7 @@ tjs.Navigation = (function(context, $) {
         var shiftWindow = function() {
             scrollBy(0, -80)
         };
-        context.addEventListener("hashchange", shiftWindow);
+        context.addEventListener('hashchange', shiftWindow);
         if (context.location.hash) {
             shiftWindow();
         }

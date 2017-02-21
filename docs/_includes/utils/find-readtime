@@ -1,0 +1,13 @@
+{% assign WORD_COUNT = include.entry.content | number_of_words %}
+{% if WORD_COUNT > 250 %}
+	{% assign READ_TIME_MAIN = WORD_COUNT | divided_by: 130 %}
+	{% assign READ_TIME_REMAINDER = WORD_COUNT | modulo: 130 %}
+	{% if READ_TIME_REMAINDER > 20 %}
+		{% assign READ_TIME = READ_TIME_MAIN | plus : 1 %}
+	{% else %}
+		{% assign READ_TIME = READ_TIME_MAIN %}
+	{% endif %}
+	{% assign WORD_COUNT = nil %}
+	{% assign READ_TIME_MAIN = nil %}
+	{% assign READ_TIME_REMAINDER = nil %}
+{% endif %}

@@ -1,0 +1,6 @@
+---
+layout: default
+section: developerhubBlog
+hideLogoInit: false
+---
+{% include setup %} <div class="jumbotron jumbotron-fluid developerhub-blog-cover"> <div class="container"> <section class="page col-12"> <div class="col-12 text-center"> <div class="masthead-brand"><b>THOMAS</b> JOSEPH</div> <h1 class="mb-4 mt-4 masthead-heading">Developer<span style="color:#999999">Hub</span> blog</h1> <p class="lead masthead-lead"> Blogs on software, technology, marketing, business and everything related to my passion &amp; profession</p> </div> </section> </div> </div> {% include themes/{{ site.JB.theme }}/fragments/breadcrumb.html %} <div class="container"> {% include themes/{{ site.JB.theme }}/fragments/promo-featurette.html entries=site.posts limit=20 category='developerhub' %} <div class="row"> <a href="/developerhub/blog/archive.html" class="btn btn-lg btn-primary mx-auto">All Posts</a> </div> </div>

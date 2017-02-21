@@ -1,0 +1,24 @@
+{% assign FEATURED_IMAGE = nil %}
+{% if include.entry.featuredImage and include.entry.featuredImage > 0 %}
+	{% assign FEATURED_IMAGE = include.entry.featuredImage %}
+{% elsif include.entry.content contains '<img ' %}
+	{% assign images = include.entry.content | split: "<img " %}
+	{% for image in images %}
+	  {% if image contains 'src=' %}
+	    {% assign img_tag_arr = image | split:">" | first  | split: "src=" %}
+	    {% assign img_path_start = img_tag_arr[1] %}
+	    {% assign img_quot = img_path_start | slice:0 %}
+	    {% assign img_arr = img_path_start | split: img_quot %}
+	    {% assign FEATURED_IMAGE =  img_arr[1] | strip %}
+
+	    {% assign img_tag_arr = nil %}
+	    {% assign img_path_start = nil %}
+	    {% assign img_quot = nil %}
+	    {% assign img_arr = nil %}
+	    {% if FEATURED_IMAGE.size > 0 %}
+		    {% break %}
+		{% endif %}
+	  {% endif %}
+	{% endfor %}
+	</ol>
+{% endif %}

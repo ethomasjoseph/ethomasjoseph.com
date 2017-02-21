@@ -8,7 +8,7 @@ kramdown:
 
 
 # Server
-source: app
+source: docs
 exclude: [blogger-import, src]
 
 
