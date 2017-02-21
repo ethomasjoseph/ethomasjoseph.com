@@ -1,0 +1,22 @@
+ul.tag_box.inline {
+    padding: 0;
+    font-size: 85%;
+}
+
+ul.tag_box.inline li {
+    display: inline-block;
+    margin: 0.2rem;
+    border: 1px solid $gray-light;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: $gray-lighter;
+}
+
+.card-columns-tags {
+  @include media-breakpoint-down(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-up(md) {
+    column-count: 2;
+  }
+}

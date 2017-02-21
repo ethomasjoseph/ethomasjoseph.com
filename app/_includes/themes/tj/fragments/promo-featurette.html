@@ -19,7 +19,7 @@
                   <i class="fa fa-tags" aria-hidden="true"></i>
                   <span style="font-size: 1.2rem;">
                     {% for tag in entry.tags %}
-                    <span class="badge pill badge-default bg-inverse"><a class="text-white" href="/{{ entry.categories[0] }}/tags.html#{{ tag }}">{{ tag }}</a></span>
+                    <span class="badge pill badge-default bg-inverse"><a class="text-white" href="/{{ entry.categories[0] }}/tags.html#{{ tag | downcase | replace: ' ', '-' }}-ref">{{ tag | upcase }}</a></span>
                     {% endfor %}
                   </span>
                   {% endif %}
