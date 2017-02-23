@@ -23,10 +23,7 @@ exclude: [blogger-import, src]
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-shorttitle : "TJ"
-title: "TJ's technology bliki"
-tagline: Driven by values. Powered by technology
-description: Musings on software, technology, marketing, business and everything related to my passion & profession
+title: "Personal Website | Thomas Joseph"
 author :
   id: ethomasjoseph
   name : Thomas Joseph
@@ -85,7 +82,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ASSET_PATH : http://images.ethomasjoseph.com
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -151,12 +148,12 @@ JB :
   # where [HELPER] is the name of the helper you are overriding.
 
 
-prose:
-  siteurl: "http://ethomasjoseph.com"
-  media: "blog/assets/imgs"
+# prose:
+#  siteurl: "http://ethomasjoseph.com"
+#  media: "blog/assets/imgs"
 
 gems:
-  - jemoji
+#  - jemoji
 #  - jekyll-sitemap
 
 host: 0.0.0.0

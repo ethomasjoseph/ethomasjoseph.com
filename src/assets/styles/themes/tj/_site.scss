@@ -8,26 +8,6 @@
 	font-size: 3.3rem;
 }
 
-.list-dotted {
-	.nav-item {
-		margin-right: 0.7rem;
-		margin-left: 0.7rem;
-		&:not(:first-child):before {
-		    display: inline-block;
-		    content: "";
-		    position: absolute;
-		    width: 5px;
-		    height: 5px;
-		    background: #fff;
-		    top: 0px;
-		    margin-top: 1rem;
-		    margin-right: 1rem;
-		    border-radius: 5px;
-		    margin-left: -0.8rem;
-		}
-	}
-}
-
 // For Promo Cards
 .promo-card {
 	margin-top: 1rem;

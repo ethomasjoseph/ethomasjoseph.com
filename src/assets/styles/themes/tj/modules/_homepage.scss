@@ -14,15 +14,15 @@
 }
 
 .home-cover {
-  @include imgCover('/assets/images/backgrounds/hudson-nyc-1080.jpg');
+  @include imgCover($image-path + '/assets/images/backgrounds/hudson-nyc-1080.jpg?blur=1');
 }
 
 .developerhub-cover {
-   @include imgCover('/assets/images/backgrounds/developer-screen.png', rgba(0,0,0, 0.9), rgba(100,100,100, 0.8));
+   @include imgCover($image-path + '/assets/images/backgrounds/developer-screen.png?width=1080&blur=1', rgba(0,0,0, 0.9), rgba(100,100,100, 0.8));
 }
 
 .developerhub-blog-cover {
-   @include imgCover('/assets/images/backgrounds/tech-blogging.jpg', rgba(0,0,0, 0.95), rgba(100,100,100, 0.8));
+   @include imgCover($image-path + '/assets/images/backgrounds/tech-blogging.jpg?width=1080&blur=1', rgba(0,0,0, 0.95), rgba(100,100,100, 0.8));
 }
 
 .masthead-brand {
@@ -48,7 +48,7 @@
 .profile-writup {
 	background-image: linear-gradient(
       to bottom, 
-      rgba(200,200,200, 0.7),
+      rgba(255,255,255, 0.7),
       rgba(255,255,255, 0.7)
     ) !important;
     background-color: transparent;

@@ -1,3 +1,17 @@
+.list-dotted {
+	.nav-item {
+		margin-right: 0.7rem;
+		margin-left: 0.7rem;
+		margin-bottom: -0.4rem;
+		.nav-link {
+			color: $white !important;
+		}
+		.active {
+			border-bottom: .25rem solid $brand-primary;
+		}
+	}
+}
+
 .sidebar-wrapper {
   display: none;
   height: 100%;
