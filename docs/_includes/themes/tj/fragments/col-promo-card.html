@@ -1,5 +1,5 @@
     {% include utils/find-host %}
-        <div class="card-columns">
+        <div class="card-columns col-12">
         {% for entry in include.entries limit:include.limit  %}
           {% if include.category == nil or  include.category == entry.categories[0] %}
             {% if include.stream == nil or include.stream == entry.stream %}
