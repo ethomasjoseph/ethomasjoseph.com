@@ -1,11 +1,14 @@
     <div class="container">
-        <nav class="breadcrumb">
-    	{% for breadcrumb in SECTION.breadcrumb %}
-    		{% if forloop.last %}
-					<span class="breadcrumb-item active">{{breadcrumb.title}}</span>
-				{% else %}
-					<a class="breadcrumb-item" href="{{breadcrumb.link}}">{{breadcrumb.title}}</a>
-				{% endif %}
-			{% endfor %}
-        </nav>
+        <div class="row">
+            <nav class="small d-block p-3">
+        	{% for breadcrumb in SECTION.breadcrumb %}
+        		{% if forloop.last %}
+    					<span class="breadcrumb-item active">{{breadcrumb.title}}</span>
+    				{% else %}
+    					<a class="breadcrumb-item" href="{{breadcrumb.link}}">{{breadcrumb.title}}</a>
+    				{% endif %}
+    			{% endfor %}
+            </nav>
+        </div>
+        <hr/>
     </div>
