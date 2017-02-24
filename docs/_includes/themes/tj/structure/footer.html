@@ -1,22 +1,43 @@
     <footer class="footer-row">
         <div class="container">
-            <div class="row flex-row">
-                <div class="col-12 text-center pt-2 pb-1">
-    <a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img src="{{ site.data.sections[0].brandImagePath }}" style="height: {{ site.data.sections[0].brandImageHeight }}" class="img-fluid"/></a>
+            <div class="row flex-row py-1">
+                <div class="col-xs-12 col-md-6">
+                    <nav rel="navigation">
+                        <ul class="nav footer-nav-list justify-content-center justify-content-md-start">
+                          <li class="nav-item" style="margin-left: -0.7rem;">
+                            <a class="nav-link" href="{{ BASE_PATH }}/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ BASE_PATH }}/developerhub">DeveloperHub</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ BASE_PATH }}/about">About</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ BASE_PATH }}/legal">Legal</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/ethomasjoseph/ethomasjoseph.com" target="_blank">Source@GitHub</a>
+                          </li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="col-12 text-center pb-3">
-    <strong>Copyright &copy; {{author.name}} {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</strong>
-                </div>
-                <div class="col-12 text-center">
-    <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> unless otherwise stated.</p>
-                   <hr>
-                </div>
-            </div>
-            <div class="row flex-row">
-                <div class="col-12 text-center">
+                <div class="col-xs-12 col-md-6 mt-3 mt-md-0 text-center text-md-right">
                     {% include {{THEME_BASE_PATH}}/fragments/social-connect.html sizeclass="fa-2x" %}
                 </div>
-                <!-- /.col-lg-12 -->
+            </div>
+            <hr/>
+            <div class="row flex-row">
+                <div class="col-6">
+                    <a href="/" rel="license"><img src="{{ site.data.sections[0].brandImagePath }}" style="height:0.85rem" class="img-fluid"/></a>
+                    <div class="d-block mt-2">
+                        <span>Copyright &copy; {{author.name}} {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</span>
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="d-block">Proudly hosted on</div>
+                    <a href="https://pages.github.com/" target="_blank"><img src="/assets/images/icons/github-pages-logo.svg" height="25px"></a>
+                </div>
             </div>
             <!-- /.row -->
         </div>

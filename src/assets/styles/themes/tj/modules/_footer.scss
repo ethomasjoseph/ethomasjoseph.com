@@ -5,3 +5,12 @@
     margin-top: 1rem;
     font-size: 0.8rem;
 }
+
+.footer-nav-list {
+	li:not(:first-child):before {
+		content: "|";
+		display: inline-block;
+	    position: absolute;
+	    top: 0.37rem;
+	}
+}
