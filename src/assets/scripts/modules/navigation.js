@@ -5,7 +5,8 @@ var tjs = window.tjs || {};
 tjs.Navigation = (function(context, $) {
     var _init,
     _handlePageScroll,
-    _handleHashChange;
+    _handleHashChange,
+    _handleMobileNav;
 
     _handlePageScroll = function() {
         // register the scroll function only if it is initially hidden.
@@ -34,9 +35,22 @@ tjs.Navigation = (function(context, $) {
         }
     };
 
+    _handleMobileNav = function() {
+        // Open mobile nav when button is clicked
+        $('#sidebarToggler').on('click', function() {
+        $('#sidebar').fadeIn(1).css('width', '50%');
+        });
+
+        // Close mobile nav
+        $('.btn-sidebar-close').on('click', function(){
+        $('#sidebar').css('width','0').fadeOut();
+        });
+    };
+
     _init = function() {
         _handlePageScroll();
         _handleHashChange();
+        _handleMobileNav();
     };
 
     _init();
