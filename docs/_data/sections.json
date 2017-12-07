@@ -4,8 +4,8 @@
 		"_description" : "Main part of website, which is not in any subsection.",
 		"title": "Thomas Joseph",
 		"homePath": "/",
-		"brandImagePath" : "/assets/images/icons/thomas-joseph.svg",
-		"brandImageHeight" : "1.3rem",
+		"brandImagePath" : "/assets/images/icons/thomas-joseph.svg.png",
+		"brandImageHeight" : "1.1rem",
 		"breadcrumb" : [
 			{
 				"title" : "Home",
@@ -18,7 +18,7 @@
 		"_description" : "The DeveloperHub section",
 		"title": "DeveloperHub | Thomas Joseph",
 		"homePath": "/developerhub",
-		"brandImagePath" : "/assets/images/icons/developerHub-logo.svg",
+		"brandImagePath" : "/assets/images/icons/developerHub-logo.svg.png",
 		"brandImageHeight" : "2rem",
 		"breadcrumb" : [
 			{
@@ -36,7 +36,7 @@
 		"_description" :"Blogs in the DeveloperHub section",
 		"title": "DeveloperHub blog | Thomas Joseph",
 		"homePath": "/developerhub/blog",
-		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg",
+		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg.png",
 		"brandImageHeight" : "2rem",
 		"breadcrumb" : [
 			{
@@ -58,7 +58,7 @@
 		"_description" : "The Blog Post in the DeveloperHub section",
 		"title": "DeveloperHub blog | Thomas Joseph",
 		"homePath": "/developerhub/blog",
-		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg",
+		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg.png",
 		"brandImageHeight" : "2rem",
 		"breadcrumb" : [
 			{
