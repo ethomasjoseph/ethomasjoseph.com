@@ -7,7 +7,7 @@ summary: Find more on my profile, this website, its intent and the various eleme
 ## Me
 I am Thomas Joseph - a passionate software developer and architect - inspired by challenges. Technology has always intrigued me, and I strive to apply creativity to every task at hand. I am a lazy developer, so I find interesting and swifter ways of working through boring tasks.
 
-On my day job, I help my clients in their digital transformation journey with strategy, architecture and execution. I love technology at heart, and envision to create a better world with techology. So I spend my spare time learning about and experimening on emerging technologies, and those on the adoption curve.
+On my day job, I help my clients in their digital transformation journey with strategy, architecture and execution. I love technology at heart, and envision to create a better world with technology. So I spend my spare time learning about and experimenting on emerging technologies, and those on the adoption curve.
 
 JavaScript, Data Science and Microservices are my current area of interest, and you can find me writing about it in the technology section.
 
