@@ -2,11 +2,15 @@
 layout: post
 title: Migrating my blog from Blogger
 date: '2017-12-07T21:40:00.005-04:00'
+featuredImage: /assets/images/main/migration.jpg
+featuredImage_author: Dr. Georg Wietschorke
+featuredImage_author_profileUrl: https://pixabay.com/en/users/Georg_Wietschorke-3238642/
 author: ethomasjoseph
 published: true
 categories: [developerhub, blog]
 modified_time: '2017-12-07T21:40:00.005-04:00'
 ---
+
 I started blogging starting 2007 more as an experiment. Although I have not been good at blogging. Having a blog was important for me since I would often write draft ready for publishing, even though those would never be published. It just worked, but not good enough for technologist - to put a code snippet it just takes a lot of time. I always felt constrained by the web based editor, and the limitations of Blogger in how much can be customized. Finally, I have decided to say Bye to Blogger and say Hi to Jekyll for powering my blog, and my personal website.
 
 ## Starting the migration

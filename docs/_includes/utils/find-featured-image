@@ -1,5 +1,5 @@
 {% assign FEATURED_IMAGE = nil %}
-{% if include.entry.featuredImage and include.entry.featuredImage > 0 %}
+{% if include.entry.featuredImage and include.entry.featuredImage != blank %}
 	{% assign FEATURED_IMAGE = include.entry.featuredImage %}
 {% elsif include.entry.content contains '<img ' %}
 	{% assign images = include.entry.content | split: "<img " %}

@@ -17,13 +17,15 @@
 	        {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
 	      </div>
 	      <div class="col-xs-12 col-md-8 push-md-2 blog-main">
-	      	{% if page.featuredImage and page.featuredImage > 0 %}
+					<hr>
+	      	{% if page.featuredImage  != blank  %}
 	        <div class="post-primary-image text-center">
-	          <img class="img-thumbnail img-fluid mx-auto" style="max-height: 20rem;" src="page.featuredImage">
+	          <img class="img-thumbnail img-fluid mx-auto" style="width: 100%;" src="{{page.featuredImage}}">
 	        </div>
+					{% if page.featuredImage_caption %}<strong class="font-weight-bold">{{page.featuredImage_caption}}</strong>{% endif %}
+					<p class="text-right"><cite>Image Credit: <a href="{{page.featuredImage_author_profileUrl}}" target="_blank">{{page.featuredImage_author}}</a></cite></p>
 	        {% endif %}
-	        <div class="blog-post">
-	          <hr>
+	        <div class="blog-post text-justify">
 				{% include {{THEME_BASE_PATH}}/structure/maincontent.html %}
 	        </div><!-- /.blog-post -->
 	        <hr>
@@ -34,7 +36,7 @@
               		<span class="text-uppercase promo-card-stream"><a href="#">{{ page.stream }}</a></span>
               	</div>
               {% endif %}
-	          
+
               {% if page.tags.size > 0 %}
 	          	<i class="fa fa-tags" aria-hidden="true"></i>
 	          	<strong style="font-size: 1.2rem;">
