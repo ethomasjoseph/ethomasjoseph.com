@@ -18,7 +18,7 @@
 	      </div>
 	      <div class="col-xs-12 blog-main">
 					<hr>
-	      	{% if page.featuredImage  != blank  %}
+	      	{% if page.featuredImage and page.featuredImage  != blank  %}
 	        <div class="post-primary-image text-center">
 	          <img class="img-thumbnail img-fluid mx-auto" style="max-height: 55vh;" src="{{page.featuredImage}}">
 						<div class="mb-3">
