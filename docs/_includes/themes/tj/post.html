@@ -1,6 +1,6 @@
 	<div class="container pt-5 mt-4">
 	    <div class="row">
-	      <div class="col-xs-12">
+	      <div class="col-12">
 	      	<div class="post-meta-info">
 		        <time class="text-muted">{{page.date | date: "%A, %d-%b-%Y" }}</time>
 		        {% include utils/find-author %}
@@ -16,7 +16,7 @@
 	        <a href="#comments" class="comments"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<span class="disqus-comment-count" data-disqus-url="{{ HOST }}{{page.url}}">Comments</span></a>
 	        {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
 	      </div>
-	      <div class="col-xs-12 blog-main">
+	      <div class="col-12 blog-main">
 					<hr>
 	      	{% if page.featuredImage and page.featuredImage  != blank  %}
 	        <div class="post-primary-image text-center">
