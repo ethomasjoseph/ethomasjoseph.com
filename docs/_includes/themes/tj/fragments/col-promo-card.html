@@ -3,10 +3,10 @@
         {% for entry in include.entries limit:include.limit  %}
           {% if include.category == nil or  include.category == entry.categories[0] %}
             {% if include.stream == nil or include.stream == entry.stream %}
-              {% include utils/find-featured-image entry=entry %}      
+              {% include utils/find-featured-image entry=entry %}
               <div class="card promo-card bg-faded">
                 {% if FEATURED_IMAGE and FEATURED_IMAGE.size > 0 %}
-                  <a>
+                  <a href="{{ entry.url }}">
                     <img class="card-img-top img-fluid promo-img" src="{{ FEATURED_IMAGE }}">
                   </a>
                 {% endif %}
@@ -19,7 +19,7 @@
                   <p class="card-text"><a href="{{ entry.url }}">{% if entry.summary %}{{ entry.summary | truncatewords: 30 }}{% else %}{{ entry.excerpt | strip_html | truncatewords: 25}}{% endif %}</a></p>
                   <footer>
                     <small>
-                      <time>{{entry.date | date: "%d-%b-%Y" }}</time> &middot; 
+                      <time>{{entry.date | date: "%d-%b-%Y" }}</time> &middot;
                       <span class="text-primary"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;<a href="{{ HOST }}{{entry.url}}#disqus_thread" class="comments text-primary">&nbsp;Comments</a></span>
                     </small>
                   </footer>
