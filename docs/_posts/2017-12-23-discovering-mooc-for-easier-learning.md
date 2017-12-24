@@ -20,11 +20,11 @@ MOOCs enables learning for any one with computer and an Internet connection. The
 The learner in MOOC courses can also interact with fellow learners in dedicated course forums. Some of them even allow for in-person meetings and meet-ups as well. This essentially means that MOOCs are the interesting combination of education, entertainment and social networking. Like any traditional course, the MOOCs have a start and end date and has some timelines to be followed. Most of the courses however offer you flexibility in the when you can start your course. When the course is completed, it gives a sense of achievement to the learners. While most of the MOOCs are free, some courses also allows you to optionally pay and get credits or certificates for your learning.
 
 ## MOOCs for fun and profit
-Even though a great medium of earning, MOOCs do not replace the traditional ways of learning. The MOOCs does not allow the learnings to personally interact with the profession / teacher. Typical MOOCs do not have the study groups as well. However, some of them have a similar concept where there are Meetups organized for the learners of a course, where you can meet your fellow learners in person. This also gives an opportunity for you to network.
+Even though a great medium of learning, MOOCs do not replace the traditional ways of learning. The MOOCs does not allow the learnings to personally interact with the profession / teacher. Typical MOOCs do not have the study groups as well. However, some of them have a similar concept where there are Meetups organized for the learners of a course, where you can meet your fellow learners in person. This also gives an opportunity for you to network.
 
 Even if you do not consider MOOCs for your formal education, the MOOCs can serve as an excellent medium which can be used to enhance skills for professionals, or to complement your traditional learning. MOOCs bring courses from the world's best institutions at your disposal, cutting through the boundaries of distance, economic or educational background.
 
-## Getting your MOOC
+## Choosing your MOOC
 Before choosing your MOOC, it would be good to do some research to make sure that you get the best one out there. There are dedicated MOOC search engines and forums where you can look out for the best MOOC for the your subject. These sites often rate the courses, and previous learners would often share their experience with the course. Some of the sites where you can research for finding the MOOCs are given below:
 * <a href="https://opencourser.com/" target="_blank">OpenCourser</a>
 * <a href="https://www.class-central.com/" target="_blank">Class Central</a>
@@ -32,4 +32,4 @@ Before choosing your MOOC, it would be good to do some research to make sure tha
 * <a href="http://moocse.com/" target="_blank">MOOC Search Engine</a>
 
 
-In spite of many people criticizing MOOCs for being "loose" and "disasterous", the fact remains that MOOCs are here to stay, and help eager learners in achieving their objective of attaining quality education. It is certainly a boon for busy professionals and executives to enhance their skills, or to double (or triple) skill themselves.
+In spite of many people criticizing MOOCs for being "<a href="https://elearningindustry.com/what-is-wrong-with-moocs-key-issues-to-consider-before-launching-your-first-mooc"  target="_blank">loose</a>" and "<a href="http://www.slate.com/articles/technology/future_tense/2013/07/moocs_could_be_disastrous_for_students_and_professors.html" target="_blank">disasterous</a>", the fact remains that MOOCs are here to stay, and help eager learners in achieving their objective of attaining quality education. It is certainly a boon for busy professionals and executives to enhance their skills, or to double (or triple) skill themselves.
