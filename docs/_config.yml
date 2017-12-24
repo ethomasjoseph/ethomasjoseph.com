@@ -82,7 +82,7 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : http://images.ethomasjoseph.com
+  #ASSET_PATH : http://images.ethomasjoseph.com
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -124,7 +124,7 @@ JB :
     google :
         tracking_id : 'UA-11048862-2'
     getclicky :
-      site_id : 101089513
+      site_id : '101089513'
     mixpanel :
         token : '_MIXPANEL_TOKEN_'
 
@@ -152,7 +152,7 @@ JB :
 #  siteurl: "http://ethomasjoseph.com"
 #  media: "blog/assets/imgs"
 
-gems:
+plugins:
 #  - jemoji
 #  - jekyll-sitemap
 
