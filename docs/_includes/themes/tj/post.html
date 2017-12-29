@@ -54,13 +54,21 @@
 		<div class="row mt-5">
 			<div class="col-12">
 				<a name="comments"></a>
-				{% capture migratedate %}{{ 1512622800 }}{% endcapture %}
-				{% capture postdate %}{{ page.date | date: "%s" }}{% endcapture %}
+				{% capture migratedate %}{{ 1512622800 | plus: 1 }}{% endcapture %}
+				{% capture postdate %}{{ page.date | date: "%s" | plus: 1 }}{% endcapture %}
 				<!--
-				{{ migratedate }}
-				{{ postdate }}
-				{{ page.date }}
+					{{ migratedate }}
+					{{ postdate }}
+					{{ page.date }}
 				-->
+				{% if postdate < migratedate %}
+					<div class="alert alert-info alert-dismissible fade show" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<strong>The older comments are all gone!</strong> I recently <a href="{% post_url /developerhub/2017-12-07-migrating-my-blog-to-jekyll-from-blogger %}">migrated my blog from blogger</a>, but the Google+ comments are too stubborn and crappy to be migrated. I am now starting all over again, and decided to instead use a new commenting system from Disqus.
+					</div>
+				{% endif %}
 				{% include JB/comments %}
 			</div>
 		</div>
