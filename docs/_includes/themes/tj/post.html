@@ -55,15 +55,17 @@
 			<div class="col-12">
 				<a name="comments"></a>
 				{% assign migratedate = 1512622800 | times: 1 | plus: 1 %}
-				{% assign postdate = page.date | date: "%s" | times: 1 | plus: 1 %}
-				{% assign datediff = migratedate | minus: postdate %}
+				{% assign postdate = page.date | date: '%s' | times: 1 | plus: 1 %}
+				{% assign date_diff = migratedate | minus: postdate | times: 1 %}
+				{% assign datediffstr = date_diff | append: 'X' %}
 				<!--
 					migratedate: {{ migratedate }}
 					postdate: {{ postdate }}
 					page.date : {{ page.date }}
 					datediff: {{ datediff }}
+					datediffstr: {{ datediffstr }}
 				-->
-				{% if datediff and datediff > 0 %}
+				{% if date_diff and date_diff > 0 %}
 					<div class="alert alert-info alert-dismissible fade show" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
