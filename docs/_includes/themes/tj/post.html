@@ -54,14 +54,16 @@
 		<div class="row mt-5">
 			<div class="col-12">
 				<a name="comments"></a>
-				{% assign migratedate = 1512622800 | times: 1 %}
-				{% assign postdate = page.date | date: "%s" | times: 1 %}
+				{% assign migratedate = 1512622800 | times: 1 | plus: 1 %}
+				{% assign postdate = page.date | date: "%s" | times: 1 | plus: 1 %}
+				{% assign datediff = migratedate | minus: postdate %}
 				<!--
 					{{ migratedate }}
 					{{ postdate }}
 					{{ page.date }}
+					{{ datediff }}
 				-->
-				{% if postdate < migratedate %}
+				{% if datediff > 1 %}
 					<div class="alert alert-info alert-dismissible fade show" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
