@@ -54,8 +54,8 @@
 		<div class="row mt-5">
 			<div class="col-12">
 				<a name="comments"></a>
-				{% capture migratedate %}{{ 1512622800 | plus: 1 }}{% endcapture %}
-				{% capture postdate %}{{ page.date | date: "%s" | plus: 1 }}{% endcapture %}
+				{% assign migratedate = 1512622800 | times: 1 %}
+				{% assign postdate = page.date | date: "%s" | times: 1 %}
 				<!--
 					{{ migratedate }}
 					{{ postdate }}
