@@ -1,0 +1,3 @@
+.error-404-cover {
+   @include imgCover($image-path + '/assets/images/backgrounds/lost-places-1719531_1920.jpg?width=1080&blur=1', rgba(255,255,255, 0.4), rgba(220,220,220, 0.4));
+}
