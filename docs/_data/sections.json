@@ -32,6 +32,28 @@
 		]
 	},
 	{
+		"name": "cheetsheet",
+		"_description" :"Blogs in the DeveloperHub section",
+		"title": " Cheatsheets & Quick Reference - DeveloperHub | Thomas Joseph",
+		"homePath": "/developerhub/cheatsheet",
+		"brandImagePath" : "/assets/images/icons/developerHub-blog-logo.svg.png",
+		"brandImageHeight" : "2rem",
+		"breadcrumb" : [
+			{
+				"title" : "Home",
+				"link"	: "/"
+			},
+			{
+				"title" : "DeveloperHub",
+				"link"	: "/developerhub"
+			},
+			{
+				"title" : "Cheatsheet",
+				"link"	: "/developerhub/cheatsheet"
+			}
+		]
+	},
+	{
 		"name": "developerhubBlog",
 		"_description" :"Blogs in the DeveloperHub section",
 		"title": "DeveloperHub blog | Thomas Joseph",

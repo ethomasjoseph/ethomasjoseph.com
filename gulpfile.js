@@ -135,7 +135,7 @@ gulp.task('jekyll', function() {
 gulp.task('clean', del.bind(null, ['_site']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['config', 'html', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['config', 'html', 'fonts', 'jekyll'], () => {
     browserSync.init({
       notify: true,
       proxy: "localhost:4000",

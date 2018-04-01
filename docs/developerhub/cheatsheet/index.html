@@ -1,0 +1,8 @@
+---
+layout: default
+section: cheetsheet
+hideLogoInit: false
+title: Cheatsheets & Quick Reference
+summary: Find cheatsheets and some quick references on various topics for developers in this section of the website.
+---
+{% include setup %} <div class="jumbotron jumbotron-fluid developerhub-cover"> <div class="container"> <section class="page col-12"> <div class="col-12 text-center"> <h1 class="mb-4 mt-4 masthead-heading">{{ page.title }}</h1> <p class="lead masthead-lead">{{ page.summary }}</p> </div> </section> </div> </div> {% include themes/{{ site.JB.theme }}/fragments/breadcrumb.html %} <div class="container"> <div class="row"> {% include themes/{{ site.JB.theme }}/fragments/col-promo-card.html entries=site.pages limit=20 category='dev-cheetsheet'%} </div> </div> 

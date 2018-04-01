@@ -3,8 +3,17 @@
 			<div class="col-12">
 				<h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
 				{% if page.summary %}<p class="lead">{{ page.summary }}</p>{% endif %}
+				{% if page.last_updated %}
+				<small><em>Last Updated: {{ page.last_updated | date: "%B %d, %Y"}}</em></small>
+				{% endif %}
 				<hr/>
 				{% include {{THEME_BASE_PATH}}/structure/maincontent.html %}
+			</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-12">
+				{% include JB/comments %}
 			</div>
 		</div>
 	</div>
