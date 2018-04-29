@@ -3,6 +3,7 @@ layout: post
 title: Introducing Cheatsheets
 date: '2018-04-28T00:45:00.005-04:00'
 author: ethomasjoseph
+featuredImage: /assets/images/main/cheatsheets.png
 published: true
 categories: [developerhub, blog]
 modified_time: '2018-04-28T00:45:00.005-04:00'
