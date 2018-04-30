@@ -23,7 +23,7 @@
 	          <img class="img-thumbnail img-fluid mx-auto" style="max-height: 55vh;" src="{{page.featuredImage}}">
 						<div class="mb-3">
 							{% if page.featuredImage_caption %}<strong class="font-weight-bold">{{page.featuredImage_caption}}</strong>{% endif %}
-							<cite><small>Image Credit: <a href="{{page.featuredImage_author_profileUrl}}" target="_blank">{{page.featuredImage_author}}</a></small></cite>
+							{% if page.featuredImage_author_profileUrl %}<cite><small>Image Credit: <a href="{{page.featuredImage_author_profileUrl}}" target="_blank">{{page.featuredImage_author}}</a></small></cite>{% endif %}
 						</div>
 	        </div>
 					{% endif %}
