@@ -2,7 +2,7 @@
 layout: post
 title: Reflecting on the year 2018
 author: ethomasjoseph
-categories: [living, blog]
+categories: [lifehack, blog]
 ---
 As 2018 came to a close, I reflected on the past year and tried retrospect the past year. I have now been doing this for few years. Compared to past 2-3 years, this year I had mixed feelings on things which went well vs the things that did not go well. Every year as I reflect, a few things that come up as action items to improve upon. I even put them to practice for some time, but they don't last longer than a few weeks - lucky if they last a few months! Why?
 
