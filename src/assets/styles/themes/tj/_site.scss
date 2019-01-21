@@ -99,3 +99,9 @@ table {
 thead {
 	background: lighten($gray, 50);
 }
+
+
+figure.highlight, div.highlighter-rouge {
+    border: 1px dotted #ccc;
+    padding: 4px;
+}
