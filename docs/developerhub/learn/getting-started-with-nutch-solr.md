@@ -44,10 +44,10 @@ This should give a reasonable output indicating that the install was correct.
 Create a workspace directory in the following structure. We will get to the details of the structure shortly
 
 ~~~ bash
-${NUTCH_HOME}/workspace + /seeds
-                        + /crawldata
+${NUTCH_HOME}/workspace/<crawlname> + /seeds
+                                    + /crawldata
 ~~~
-I highly recommend this step of creating a workspace directory, as we can have all the custom configurations and the workspace files required for Nutch crawling. Rest of this exercise assumes that the workspace folder is created as specified here.
+I highly recommend this step of creating a workspace directory, as we can have all the custom configurations and the workspace files required for Nutch crawling. Naming your crawl and specifying a directory for every crawl is a good idea, as you can keep the crawl specific configuration and data separately. In my case, I've named the crawl as `crawl-ethomasjoseph`. Rest of this exercise assumes that the workspace folder is created as specified here.
 
 ### 3. Configuring Nutch
 Nutch requires two configuration changes before a website can be crawled:
@@ -68,7 +68,7 @@ In this case, add your custom value to a property `http.agent.name`, such that t
 </property>
 ~~~
 #### 3.2. Create seed URLs
-Nutch would need a list of URL from where it can start a crawl. This is a plain text file that includes a list of websites, one-per-line, which nutch will look to crawl. Based on configuration, it _can_ go beyond the initial set. For examples we will create this file in the file path `${NUTCH_HOME}/workspace/seeds/urls.txt`. It should look like the below, in our case we will be crawling this website.
+Nutch would need a list of URL from where it can start a crawl. This is a plain text file that includes a list of websites, one-per-line, which nutch will look to crawl. Based on configuration, it _can_ go beyond the initial set. For examples we will create this file in the file path `${NUTCH_HOME}/workspace/crawl-ethomasjoseph/seeds/urls.txt`. It should look like the below, in our case we will be crawling this website.
 
 ~~~ text
 http://ethomasjoseph.com
@@ -172,7 +172,7 @@ To know more about index writers refer to the [Nutch Wiki](https://wiki.apache.o
 
 2. Now we will  execute the Nutch crawl scripts, so that Nutch crawls the configured site and indexes the data to Solr. We will runt the script by specifiying the seeds at`${NUTCH_HOME}/workspace/seeds`, the crawl workspace of `${NUTCH_HOME}/crawldata` and an iteration count of 7
 ~~~ bash
-${NUTCH_HOME}> ./bin/crawl -i -s workspace/seeds/ workspace/crawldata/ 7
+${NUTCH_HOME}> ./bin/crawl -i -s workspace/crawl-ethomasjoseph/seeds/ workspace/crawl-ethomasjoseph/crawldata/ 7
 ~~~
 If the operation was successful, it will take a while before the Nutch will return the control back on the console, and we can see the  message on screen that indicates what Nutch is doing.
 
