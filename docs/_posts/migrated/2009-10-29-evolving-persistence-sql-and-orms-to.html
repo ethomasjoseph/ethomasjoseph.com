@@ -47,7 +47,7 @@ We can consider two aspects in any persistence mechanism:
 Often these two aspects are baked together (in our minds most of the time). This thinking should evolve and these two should essentially be seen as separate, and ideally pluggable. We talk about adapter pattern in programming languages, but the same concept could probably be applied to persistence mechanisms as well. The persistent storage and its storing and fetching mechanism should allow widely different interfacing provided to interact with it. DB vendors can provide few interfacing mechanism, and also allow others to write other interfacing mechanism that should be pluggable.
 <br/>
 
-<img style="margin: 0px auto 10px; display: block; text-align: center; width: 300px; height: 203px;" src="//ethomasjoseph.com/assets/images/main/persistence-interfacing-small.png" alt="Persistence Interfacing" border="0" />
+<img style="margin: 0px auto 10px; display: block; text-align: center; width: 300px; height: 203px;" src="{{ site.JB.ASSET_PATH }}/assets/images/main/persistence-interfacing-small.png" alt="Persistence Interfacing" border="0" />
 
 <br/>
 Interfacing will expose the persistent store in various forms - relational model, or object model or even other models used now and may come in future.  Mapping of the datastore persistence model to the exposed model should reside with the interfacing mechanism used.
