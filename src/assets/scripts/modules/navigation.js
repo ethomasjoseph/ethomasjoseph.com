@@ -1,3 +1,4 @@
+'use strict';
 // Navigation Module
 var tjs = window.tjs || {};
 
@@ -27,7 +28,7 @@ tjs.Navigation = (function(context, $) {
     _handleHashChange = function() {
         // handles window's hash due to fixed navigation
         var shiftWindow = function() {
-            scrollBy(0, -80)
+            scrollBy(0, -80);
         };
         context.addEventListener('hashchange', shiftWindow);
         if (context.location.hash) {
