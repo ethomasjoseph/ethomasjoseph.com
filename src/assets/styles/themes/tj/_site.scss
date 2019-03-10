@@ -105,3 +105,9 @@ figure.highlight, div.highlighter-rouge {
     border: 1px dotted #ccc;
     padding: 4px;
 }
+
+blockquote {
+	border-left: $color-accent-3 solid;
+	padding-left: 10pt;
+	font-style: italic;
+}
