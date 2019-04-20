@@ -1,12 +1,13 @@
 ---
 layout: page
 section: learn
+collection: search
 hideLogoInit: false
 title: Getting started with Nutch & Solr
 categories: [Nutch,Solr,Search,Data Science]
 last_updated: January 21, 2019
 ---
-Our learning starts with Nutch since it is the genesis of Hadoop - technical foundational stone for most of the modern day data science. Nutch is a matured and production-ready web crawler. We will start our focus on Nutch 1.X since at the time of writing this is more mature, configurable and receives more contributions than the 2.X branch.
+Our learning starts with Nutch since it is the genesis of Hadoop - technical foundational stone for most of the modern day data science. Nutch is a matured and production-ready web crawler. We will start our focus on Nutch 1.X since at the time of writing this is more mature, configurable and receives more contributions than the 2.X branch. We will eventually also look into Nutch 2.X, once we get the basics of Nutch.
 
 ## Crawling for the first time
 We will first crawl one website, to begin with, and indexing the data to Solr. We will start simple, by starting with a binary install. We will eventually also get into source code, once we get the binary working.
@@ -71,7 +72,7 @@ In this case, add your custom value to a property `http.agent.name`, such that t
 Nutch would need a list of URL from where it can start a crawl. This is a plain text file that includes a list of websites, one-per-line, which nutch will look to crawl. Based on configuration, it _can_ go beyond the initial set. For examples we will create this file in the file path `${NUTCH_HOME}/workspace/crawl-ethomasjoseph/seeds/urls.txt`. It should look like the below, in our case we will be crawling this website.
 
 ~~~ text
-http://ethomasjoseph.com
+http:{{ site.JB.ASSET_PATH }}
 ~~~
 
 #### 3.3. Configure URL regular expression filter
